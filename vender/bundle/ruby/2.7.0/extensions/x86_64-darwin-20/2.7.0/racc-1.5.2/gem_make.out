@@ -1,0 +1,16 @@
+current directory: /Users/eisiuke/env/techpit_mach/vender/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+/Users/eisiuke/.rbenv/versions/2.7.3/bin/ruby -I /Users/eisiuke/.rbenv/versions/2.7.3/lib/ruby/site_ruby/2.7.0 -r ./siteconf20210827-63210-wckxem.rb extconf.rb
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/eisiuke/env/techpit_mach/vender/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make DESTDIR\= clean
+
+current directory: /Users/eisiuke/env/techpit_mach/vender/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make DESTDIR\=
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/eisiuke/env/techpit_mach/vender/bundle/ruby/2.7.0/gems/racc-1.5.2/ext/racc/cparse
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20210827-63210-12r5dmg/racc
