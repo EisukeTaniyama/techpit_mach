@@ -3,9 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :name,presence:true
-  enum gender: { man: 0, woman: 1 }
+  
+  validates :name, presence: true
   validates :self_introduction, length: { maximum: 500 }
+
+  enum gender: { 男性: 0, 女性: 1 }
+
+  # ここに追加
+  mount_uploader :profile_image, ProfileImageUploader
 
   def update_without_current_password(params, *options)
 
@@ -14,9 +19,8 @@ class User < ApplicationRecord
       params.delete(:password_confirmation)
     end
 
-    result = update(params, *options)
+    result = update_attributes(params, *options)
     clean_up_passwords
     result
   end
-
 end
